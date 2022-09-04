@@ -31,6 +31,7 @@ class Ui_MainWindow(object):
 "}")
         self.recomendList.setFlow(QtWidgets.QListView.Flow.LeftToRight)
         self.recomendList.setObjectName("recomendList")
+        self.recomendList.setAutoScroll(False)
         self.recomendList.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
         self.searchResult = QtWidgets.QListWidget(MainWindow)
         self.searchResult.setGeometry(QtCore.QRect(10, 66, 675, 100))

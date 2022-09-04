@@ -19,13 +19,17 @@ class ranobeClass():
     def newRanobeCoverWidget(self, name, coverUrl):
 
         widget = QWidget()
-        img = QImage()
-        img.loadFromData(requests.get(coverUrl).content)
+        print(coverUrl)
+        try:
+            img = QImage()
+            img.loadFromData(requests.get(coverUrl).content)
+        except:
+            img = 'trash/default_cover.jpg'
 
 
 
         widgetImage = QLabel()
-        widgetImage.setPixmap(QPixmap(image))
+        widgetImage.setPixmap(QPixmap(img))
         widgetImage.setScaledContents(True)
         widgetImage.setFixedSize(QSize(240, 341))
 
