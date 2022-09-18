@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ranobeView</class>
+ <widget class="QDialog" name="ranobeView">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>560</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>560</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>560</height>
+   </size>
+  </property>
+  <property name="acceptDrops">
+   <bool>false</bool>
+  </property>
+  <property name="windowTitle">
+   <string>RenobeView</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>:/icon/icons8-my-melody-480.png</normaloff>:/icon/icons8-my-melody-480.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#ranobeView{
+	background:  #272727;
+}
+</string>
+  </property>
+  <widget class="QListWidget" name="volumesList">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>300</y>
+     <width>500</width>
+     <height>250</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#volumesList{
+	background: #48494a;
+}</string>
+   </property>
+   <property name="verticalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOff</enum>
+   </property>
+   <property name="horizontalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOff</enum>
+   </property>
+   <property name="autoScroll">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="ranobeName">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>20</y>
+     <width>500</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#ranobeName{
+font-size: 22px;
+font-family: sans-serif;
+color: #ffffff;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="ranobeDescription">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>90</y>
+     <width>500</width>
+     <height>200</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#ranobeName{
+font-size: 14px;
+font-family: sans-serif;
+color: #ffffff;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="ranobeCover">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>20</y>
+     <width>240</width>
+     <height>341</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#MainWindow{
+	background:  #272727;
+}
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="parseRanobe">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>380</y>
+     <width>240</width>
+     <height>75</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#parseRanobe{
+	background-color: #000000;
+	font-family: monospace;
+	color: #ffffff;
+}
+
+#parseRanobe:hover{
+	background-color: #666;
+	color: #272727;
+}
+
+</string>
+   </property>
+   <property name="text">
+    <string>Save to File</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="loadRanobe">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>455</y>
+     <width>240</width>
+     <height>75</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#loadRanobe{
+	background-color: #000000;
+	font-family: monospace;
+	color: #ffffff;
+}
+
+#loadRanobe:hover{
+	background-color: #666;
+	color: #272727;
+}
+
+</string>
+   </property>
+   <property name="text">
+    <string>Seve to Phone</string>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../mainWindow/icons.qrc"/>
+ </resources>
+ <connections/>
+</ui>
