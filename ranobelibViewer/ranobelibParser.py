@@ -31,12 +31,15 @@ def parseHomePage():
 
 
 def searchRanobe(ranobeName):
-    res = requests.get(searchUrl + ranobeName)
-    result = json.loads(res.text)
-
     searchResult = []
 
     try:
+
+        res = requests.get(searchUrl + ranobeName)
+        result = json.loads(res.text)
+        print(result)
+
+
         for ranobe in result[1]['data']:
 
             rabobeData = {
@@ -44,17 +47,19 @@ def searchRanobe(ranobeName):
                 "id": ranobe['id'],
             }
 
-            icon = searchIconClass()
-            icon.name, icon.id = rabobeData['name'], rabobeData['id']
 
-            searchResult.append(icon)
+            searchResult.append(rabobeData)
+
+
 
     except:
 
-        icon = searchIconClass()
-        icon.name, icon.id = 'Пусто...', 0
+        rabobeData = {
+            "name": 'Пусто...',
+            "id": 0,
+        }
 
-        searchResult.append(icon)
+        searchResult.append(rabobeData)
 
 
     return searchResult
@@ -74,7 +79,8 @@ def parseRanobePage(id):
     ranobeData = {
         "name": name,
         "description": description,
-        "coverUrl": coverUrl
+        "coverUrl": coverUrl,
+        "manyVovumes": manyVovumes
     }
 
     return ranobeData
